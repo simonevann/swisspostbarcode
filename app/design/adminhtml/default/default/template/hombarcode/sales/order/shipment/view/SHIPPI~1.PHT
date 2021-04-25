@@ -1,0 +1,9 @@
+<?php
+$order = $this->getShipment()->getOrder();
+$barcode_helper = Mage::helper('barcode');
+$shipping_label = $barcode_helper->getBarcodeByOrderId($order->getId());
+?>
+<?php if (count($shipping_label)): ?>
+    <p><strong><?php echo $this->__('Shipping Label'); ?></strong></p>
+    <p><a target="_blank" href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'barcodes/' . $shipping_label[0]['file_name']; ?>"><?php echo $shipping_label[0]['file_name']; ?></a></p>
+<?php endif; ?>
