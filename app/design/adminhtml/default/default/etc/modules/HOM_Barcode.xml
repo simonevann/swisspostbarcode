@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <HOM_Barcode>
+            <active>true</active>
+            <codePool>local</codePool>
+        </HOM_Barcode>
+    </modules>
+</config>
