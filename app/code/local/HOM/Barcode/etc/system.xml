@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <hombarcode translate="label" module="barcode">
+            <label>Swiss Post Barcode</label>
+            <sort_order>100</sort_order>
+        </hombarcode>
+    </tabs>
+    <sections>
+        <hombarcode translate="label" module="barcode">
+            <label>Configuration</label>
+            <tab>hombarcode</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <soap_connection translate="label" module="barcode">
+                    <label>SOAP Connection</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <username translate="label">
+                            <label>Username</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </username>
+                        <password translate="label">
+                            <label>Password</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </password>
+                        <endpoint_url translate="label">
+                            <label>Endpoint URL</label>
+                            <comment>(Use: https://wsbc.post.ch/wsbc/barcode/v2_2 or https://int.wsbc.post.ch/wsbc/barcode/v2_2)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </endpoint_url>
+                    </fields>
+                </soap_connection>
+                <webservice translate="label" module="barcode">
+                    <label>"Barcode" web service</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <franking_license translate="label">
+                            <label>Franking License</label>
+                            <comment>You have to enter a valid franking license for your barcode web service user account!</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </franking_license>
+                        <label_layout>
+                            <label>Label Layout</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>barcode/labellayout</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </label_layout>
+                    </fields>
+                </webservice>
+                <file_infos translate="label" module="barcode">
+                    <label>"Barcode" web service - File Infos</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <name1 translate="label">
+                            <label>Name</label>
+                            <comment>(Example: Meier AG)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </name1>
+                        <street translate="label">
+                            <label>Street</label>
+                            <comment>(Example: Viktoriaplatz 10)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </street>
+                        <zip translate="label">
+                            <label>ZIP</label>
+                            <comment>(Example: 8050)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </zip>
+                        <city translate="label">
+                            <label>City</label>
+                            <comment>(Example: Zürich)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </city>
+                        <domicile_post_office translate="label">
+                            <label>Domicile Post Office</label>
+                            <comment>(Example: 3000 Bern)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </domicile_post_office>
+                    </fields>
+                </file_infos>
+            </groups>
+        </hombarcode>
+    </sections>
+</config>
