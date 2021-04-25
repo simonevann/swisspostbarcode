@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_sales_order_shipment_view>
+        <reference name="form">
+            <action method="setTemplate">
+                <template>hombarcode/sales/order/shipment/view/form.phtml</template>
+            </action>
+            <block type="adminhtml/sales_order_shipment_view_form" name="swiss_post_label" template="hombarcode/sales/order/shipment/view/shipping-label.phtml" before="-"/>
+        </reference>
+    </adminhtml_sales_order_shipment_view>
+</layout>
